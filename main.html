@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Ceci est l'en tête, le texte sur l'onglet-->
+	<title>Le Développement Web</title>
+
+    <!-- Ceci est un lien vers une stylesheet, c'est un fichier ou on mets du CSS, pour rendre le code jolis.-->
+    <link rel="stylesheet" href="css/styleMainPage.css">
+
+    <!-- Ici, on y mets un lien vers un fichier en javascript, pour permettre le scripting du code, du Javascript.-->
+	<script src="scripts/scriptMainPage.js"></script>
+</head>
+
+
+<!-- C'est le corp de la page-->
+<body>
+
+
+
+    <!-- Ici, on déclare un "header" c'est le contenus dans la bande grise-->
+	<header>
+        <!-- Ici on créer un titre, h1 est un type de texte, c'est le plus grand qu'il y ait par défaut-->
+		<h1>Bienvenus dans mon univers</h1>
+
+        <!-- Ceci est une navbar, aussi connus sous le nom de barre de navigation
+        En clair, c'est une barre qui permets d'avoir des liens clickables-->
+		<nav>
+
+            <!-- On créer une liste ici-->
+			<ul>
+                <!-- 
+                Ici, on créer une lite de quatres éléments
+                Lorsqu'on rajoute un élément "onclick=" on fait que le code va appeler une fonction lorsque
+                l'utilisateur clique sur l'élément. 
+                -->
+				<li><a href="#principle1" onclick="togglePrincipleOne()">Section 1</a></li>
+				<li><a href="#principle2" onclick="togglePrincipleTwo()">Section 2</a></li> <!-- Ici, on ajoute juste un autre élément à la lite, de même pour les autres <li>-->
+				<li><a href="#principle3" onclick="togglePrincipleThree()">Section 3</a></li>
+                <li><a href="#aboutMe" onclick="toggleAboutMe()">A propos de moi</a></li>
+			</ul>
+		</nav>
+	</header>
+    <!-- Les </element> sont ce qu'on appelle des balises fermantes, elles sont nécessaires-->
+
+
+<!-- On déclare le contenus principale avec une balise main-->
+	<main>
+
+        <!-- Ici, on créer une section, la création d'une section permets de créer des sections ou sont regroupée ensemble
+        Ca permets d'y rajouter plusieurs type de contenus, des divs, etc, et de les regrouper sous un seul sous groupe, une section
+        -->
+		<section id="principle1" class="principle">
+            
+            
+            
+            <!-- Ceci créer une bulle, et du texte s'affiche quand on passe la souris par dessus grâce à l'élement: data-info-->
+			
+            <a href="html/pageOne.html">
+            <div class="bubble" data-info="Je suis une bulle!"></div>
+            </a>
+
+            <!-- Ceci est un titre-->
+			<h2>Section 1</h2>
+            <!-- Ici, c'est simplement du texte-->
+			<p> Ici on peut mettre du texte varié c'est magnifique </p>
+            
+            <!-- Comme vous pouvez le voir ici, faire des retours à la ligne et indenter ne change rien au texte, vous pouvez essayer vous même! Par contre il faut rester dans les balises-->
+			<p> Ici également, on peut 
+                rajouter des paragraphes et
+            des retours à la ligne
+        et ça ne change
+    rien au 
+site web</p>
+
+
+            
+<!-- Ceci est un type de liste, organized list <ol> pour liste organisée avec des 1. 2. 3. une liste 
+    désorganisé serais <ul> 
+        -->
+			<ol>
+                
+            <!-- 
+            Ci-dessous, une liste pour rajouter un élément, il suffit de créer une nouvelle
+            section <li> contenus </li>
+            -->
+				<li>Là, je liste quelque chose,  c'est un premier point sur moi</li>
+				<li>Ici, en est un second</li>
+				<li>Et là en est un
+                     troisième et encore une fois
+                    les retours
+                a la ligne font rien (Regardez le code pour comprendre ça!) </li>
+                <!-- Comme vous pouvez le voir au dessus, les retours à la ligne ne font rien!
+                Par contre, en dessous, une nouvelle balise, <br> elle permets d'indiquer un retour à la ligne -->
+                <li>Par contre, <br> Ici j'ai un retour à la ligne</li>
+			</ol>
+		
+        
+        <p> Et si on commençait par rajouter une image en dessous, et parler d'un truc qu'on aime?</p>
+        </section>
+		
+        
+        
+        <!-- On créer une section avec un id unique, les id ne sont pas obligatoire à assigner,
+        ils permettent de créer une identitée unique à l'élement qu'on ajoute pour le manipuler plus tard.-->
+        <section id="principle2" class="principle">
+			
+            <!-- Cette section <a href> fait une référence au fichier pageTwo.html qui créer une zone
+                clickable qui redirige sur une autre page-->
+            <a href="html/pageTwo.html">
+
+                <!-- Ceci est simplement une bulle blanche-->
+            <div class="bubble" 
+                data-info="Clique moi dessus!" 
+                data-link="principle2.html" ></div>
+            </a>
+            
+            
+            <!-- Ceci est un titre-->
+            <h2>Section 2</h2>
+			
+            <!-- Ceci permets de rajouter un paragraphe de texte-->
+            <p>Les Cobras de ce Coding Club</p>
+			<p>Les Cobras sont là pour vous aider! On est des élèves d'Epitech choisis par l'équipe de communication d'Epitech Lille et nous sommes là par passion pour le développement informatique</p>
+            
+            
+            <!-- 
+            Ci-dessous, une liste pour rajouter un élément, il suffit de créer une nouvelle
+            section <li> contenus </li>
+            -->
+			<ol>
+				<li>On s'y connait en développement informatique dans de nombreux languages.</li>
+				<li>Pour notre 4ème année, nous partons à l'étranger.</li>
+				<li>Si vous avez une question, levez la main.</li>
+			</ol>
+
+
+            <h1>Voici une image de nous</h1>
+            <!-- Ceci permets d'afficher une image! le SRC est le nom du fichier! width et height, la taille de l'image qu'on décide-->
+            <img src="img/CobraPic.jpg" alt="CobraPic" width="1000" height="600">
+            <p> Bon, en vrais, c'est pas une image de nous, mais c'est un cobra, c'est pareil</p>
+		</section>
+		
+        
+        
+        
+        
+        <section id="principle3" class="principle">
+
+
+            <a href="html/pageThree.html">
+			<div class="bubble" data-info="Fascinant, encore une bulle!" data-link="principle3.html"></div>
+            </a>
+
+            <!-- Vous remarquez qu'ici le retour à la ligne est présenté comme un espace! 
+            C'est parce qu'on a détaché le mot donc il y a automatiquement un espace
+        Pourquoi? Parce qu'un retour à la ligne, c'est un caractère '\n' et quand il est lu en html, c'est traité comme un espace, tout simplement.-->
+            <h2>Sec
+    tion 3</h2>
+
+
+    <!-- Vous voyez qu'ici, malgrès l'espacement, sur le site ça ne fait rien, car l'html est la chose
+    la plus basique, c'est du texte, des mots, des balises.
+Les espaces sont presque "ignoré" et les retours à la ligne aussi.
+Si on voulais les séparer, il faudrait créer des nouvelles balises.-->
+			<p>Du texte          ici                avec plein d'espace</p>
+			<p>Les trois choses sympa à propos de l'html:</p>
+
+
+
+			<ol>
+				<li>Les balise p sont nommée ainsi pour dire paragraphe</li>
+				<li>Le CSS est ce qui permets de donner du visuel à l'HTML que ce soit donner du 
+                    style ou alors changer les couleurs ou la police d'écriture
+                    .</li>
+				<li>Et là, vous allez vous amuser à créer votre propre site!</li>
+			</ol>
+		</section>
+		
+        
+        
+        <section id="about-me">
+			<h2>A propos de moi</h2>
+			<p>Et si tu parlais un peu de toi?</p>
+            <!-- Ici ce serait bien un petit texte qui explique qui tu es en quelque lignes, ce que tu aime
+            
+            Et ensuite, d'en faire une liste!
+        -->
+
+
+        </section>
+
+
+        
+        </main>
+    </body>
+</html>
+    

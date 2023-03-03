@@ -1,0 +1,132 @@
+
+/* Prépare le style par défaut pour le document entier */
+body {
+	margin: 0; /* Retire toute les marges*/
+	padding: 0; /* Retire tout les espacements */
+	font-family: 'Arial', sans-serif; /* Mets la police par défaut */
+	background-color: #000; /* Background par défaut*/
+	color: #fff; /* Le texte sera en blanc*/
+}
+
+/* Style les éléments d'en tête*/
+header {
+	background-color: #333; /* Background en gris clair */
+	padding: 20px; /* Rajoute un peut de padding donc un espacement de tout les côté (haut, bas, gauche, droite, comme un carré) */
+}
+
+/* Style l'élément des textes de type H1*/
+h1 {
+	margin: 0; /* Retire les marges */
+	font-size: 36px; /* Mets la police en 36 pixels */
+}
+
+/* Style le menu de navigation */
+nav ul {
+	margin: 0; /* Retire les marges */
+	padding: 0; /*  Retire les espacements */
+	list-style: none; /* Retire les style bullet points */
+	display: flex; /* Utilise un "flexbox" layout, qui fait que ça s'espace automatiquement */
+}
+
+/* Style les éléments de la navigation */
+nav li {
+	margin-right: 20px; /* Espace les éléments entre eux */
+}
+
+/* Style les liens*/
+nav a {
+	color: #fff; /* Mets la couleur du lien en blanc */
+	text-decoration: none; /* Retire les souslignement  */
+	font-size: 20px; /* Set la police à 20 px */
+}
+
+/* Style la zone de contenu principal */
+main {
+	padding: 50px; /* Rajoute du padding de 50px dans la zone principale de 50 px */
+	display: flex; /* Mets un layout flexbox pour fit automatiquement le contenus */
+	flex-wrap: wrap; /* Permets aux sections de se wrap si besoin, donc auto retour à la ligne si trop gros */
+}
+
+/* Style each individual content section */
+section {
+	flex-basis: calc(33.33% - 20px); /*  Fix la largeur de chaque section à 1/3 de l'écran */
+	margin-right: 20px; /* Rajoute du padding entre les éléments*/
+	margin-bottom: 40px; /* Rajoute de l'spacement vertical entre les éléments */
+}
+
+/* Retire la marge du côté droit */
+section:last-of-type {
+	margin-right: 0;
+}
+
+/* Style pour les éléments <h2> */
+h2 {
+	margin: 0; /* Retire les marges */
+	font-size: 24px; /* Set la police à 24px */
+	margin-bottom: 20px; /* Rajoute du spacing bottom entre eux */
+}
+
+/* Style pour les sections principle */
+.principle {
+	position: relative; /* Place le positionnement de façon relatif */
+}
+
+/* Sets les bubles pour afficher du contenus quand on passe la souris par dessus */
+.bubble {
+	position: absolute; /* passe le positionnement */
+	top: -20px; /* Positionne la bulle verticalement au dessus de la section principe, vous pouvez changer les valeurs */
+	left: 50%; /* Positionne la bulle pour être centré */
+	transform: translateX(-50%); /* Bouge la bulle à droite de 50% de sa largeur */
+	width: 40px; /* Set le positionnement de la bulle horizontalement à 40 px*/
+	height: 40px; /* Set le positionnement de la bulle verticalement à 40 px */
+	background-color: #fff; /* Set le background de coleur blanc */
+	border-radius: 50%; /* Set le radius de la border (frontière) à 50%  */
+	cursor: pointer; /* Change le curseur quand on passe la souris par dessus */
+}
+
+/* Styles pour le tooltip de la bulle, c'est l'élément qui s'affiche quand on passe la souris par dessus */
+.bubble::after {
+	content: '?'; /* Contenus à placer dedans par défaut*/
+	display: block; /* Présente l'élément en bloc */
+	font-size: 24px; /* Set la police à 24px */
+	line-height: 40px; /* Mets la hauteur de la ligne de contenus */
+	text-align: center; /* Centre le contenus horizontalement */
+}
+
+/* Styles pour la souris passé par dessus */
+[data-info]:hover::before {
+	content: attr(data-info); /* Présente le contenus dans l'attribus (data-info) de l'élément sur lequel on passe la souris par dessus */
+	display: block; /* Display le contenus comme un bloc */
+	background-color: #fff; /* Couleur de fond du bloc */
+	color: #000; /* Couleur du texte de tooltip */
+	padding: 10px; /* Le padding, donc l'espacement  */
+	position: absolute; /* Positionnement de la bulle est placé en absolut */
+	bottom: calc(100% + 10px); /* Place la bulle à 10 px au dessus de l'item sur lequel on passe la souris par dessus */
+	left: 50%; /* Positionne le tooltip à 50% sur la gauche  */
+	transform: translateX(-50%); /* On centre le tooltip */
+	border-radius: 5px; /* Largeur de la bordure d'élément */
+}
+
+/* Styles pour la section about me */
+#about-me {
+	display: none; /* cache l'élément par défaut */
+	max-height: 0; /* Maximum de hauteur mis à 0 par défaut */
+	overflow: hidden; /* Cache le contenus qui déborde */
+	transition: max-height 0.5s ease-out; /* Mets une transition "douce" au contenus qui déborde */
+}
+
+/* Styles pour les sections */
+#principle1, #principle2, #principle3 {
+	display: none; /* cache les sections par defaut */
+}
+
+/* rajoute un style "open" aux sections qui est activable par js */
+#principle1.open, #principle2.open, #principle3.open {
+	display: block; /* affiche la section */
+}
+
+/* rajoute un style "open" à la section about me qui est activable par js */
+#about-me.open {
+	display: block; /* affiche la section */
+	max-height: 1000px; /* set la hauteur max à 1000px */
+}

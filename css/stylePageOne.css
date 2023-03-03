@@ -1,0 +1,46 @@
+.timeline {
+    position: relative;
+    margin: 50px 0;
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.year {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+.year:hover {
+    background-color: lightgray;
+}
+
+.year.active {
+    background-color: lightgray;
+}
+
+.section {
+    display: none;
+    margin-left: 100px;
+}
+
+.section.active {
+    display: block;
+}

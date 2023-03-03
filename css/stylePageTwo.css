@@ -1,0 +1,84 @@
+body{
+
+  /*Change la couleur de background*/
+  background-color: darkturquoise;
+}
+
+a {
+
+  /*
+
+    Ici, ce sera l'endroit ou il faut modifier pour changer l'apparence des liens
+  */
+}
+
+.snake {
+
+    width: 80%;
+    margin: auto;
+  
+  /* Change la couleur de background */
+    background-color: aquamarine;
+    /*Rajouter une bordure de largeur 5 pixels, type solide mais il y a d'autre types de bordures, d'une couleur spécifique*/
+    border: 5px solid #333;
+
+    /* Permets d'avoir un espacement entre la bordure et le début, comme une marge dans un cahier */
+    padding: 20px;
+
+
+    /* Permets d'éviter que l'image déborde */
+    overflow: auto;
+  }
+
+
+  
+  
+#snake-image {
+  width: 50%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+  .snake h1 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  
+  .snake h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+  
+  .snake p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .snake ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .snake li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    width: fit-content;
+  }
+  
+  /* Add any additional CSS code for your desired snake design */
+  
+  /* Change cursor to hand on hover */
+ul li:hover {
+  cursor: pointer;
+}
+
+/* Change color on hover */
+ul li:hover {
+  color: red;
+}
