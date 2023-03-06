@@ -1,17 +1,17 @@
 function toggleSection(sectionId) {
 
-    // Cache toute les sections sauf celles avec l'ID donné
-    var allSections = document.querySelectorAll("main section[id]");
+    // Récupère tout les éléments qui sont une "section" et qui ont un ID
+    var allSections = document.querySelectorAll("section[id]");
     for (var i = 0; i < allSections.length; i++) {
       var section = allSections[i];
       if (section.id === sectionId) {
         continue;
       }
-      section.classList.remove("open");
+      section.classList.remove("active");
     }
   
     // active/désactive la visibilité des éléments, les passant à leur version "open" dans le css
     var section = document.getElementById(sectionId);
-    section.classList.toggle("open");
+    section.classList.toggle("active");
   }
   

@@ -1,7 +1,7 @@
 // JavaScript code pour activer / désactiver la visibilité
 function toggleSection(sectionId) {
 
-  // Cache toute les sections sauf celles avec l'ID donné
+  // Récupère tout les éléments dans le "main" qui sont une "section" et qui ont un ID
   var allSections = document.querySelectorAll("main section[id]");
   for (var i = 0; i < allSections.length; i++) {
     var section = allSections[i];

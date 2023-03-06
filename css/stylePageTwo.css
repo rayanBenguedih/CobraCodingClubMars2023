@@ -1,38 +1,44 @@
-body{
+body {
 
   /*Change la couleur de background*/
   background-color: darkturquoise;
 }
 
+
+/* EXERCICE 2 : */
 a {
 
   /*
-
     Ici, ce sera l'endroit ou il faut modifier pour changer l'apparence des liens
   */
 }
 
+
+/* Définis le style de la section snake */
+
 .snake {
 
-    width: 80%;
-    margin: auto;
-  
+  width: 80%;
+  margin: auto;
+
   /* Change la couleur de background */
-    background-color: aquamarine;
-    /*Rajouter une bordure de largeur 5 pixels, type solide mais il y a d'autre types de bordures, d'une couleur spécifique*/
-    border: 5px solid #333;
+  background-color: aquamarine;
+  /*Rajouter une bordure de largeur 5 pixels, type solide mais il y a d'autre types de bordures, d'une couleur spécifique*/
+  border: 5px solid #333;
 
-    /* Permets d'avoir un espacement entre la bordure et le début, comme une marge dans un cahier */
-    padding: 20px;
-
-
-    /* Permets d'éviter que l'image déborde */
-    overflow: auto;
-  }
+  /* Permets d'avoir un espacement entre la bordure et le début, comme une marge dans un cahier */
+  padding: 20px;
 
 
-  
-  
+  /* Permets d'éviter que l'image déborde */
+  overflow: auto;
+}
+
+
+
+
+/* Permets d'appliquer un style aux images dans la sectoin snake */
+
 #snake-image {
   width: 50%;
   height: auto;
@@ -40,45 +46,53 @@ a {
   margin-bottom: 10px;
 }
 
-  .snake h1 {
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
-    margin-bottom: 50px;
-  }
-  
-  .snake h2 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-top: 50px;
-  }
-  
-  .snake p {
-    font-size: 1.2em;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  .snake ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .snake li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    width: fit-content;
-  }
-  
-  /* Add any additional CSS code for your desired snake design */
-  
-  /* Change cursor to hand on hover */
-ul li:hover {
-  cursor: pointer;
+
+/* Change le style des h1 dans la section snake*/
+.snake h1 {
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 50px;
 }
 
-/* Change color on hover */
+
+/* Change le style des h2 dans la section snake */
+.snake h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+
+/* Permets de changer le style des paragraphe au sein de la section snake */
+
+.snake p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Permets de choisir le style visuel des balises ul dans la section snake*/
+
+.snake ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Décide du style visuel des listes contenus dans la section snake */
+.snake li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+
+
+/* Change quelque chose lorsqu'on passe la souris par dessus un élément ul et li */
+/* EXERCICE 2 : */
 ul li:hover {
-  color: red;
+
+
 }
